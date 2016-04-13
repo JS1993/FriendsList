@@ -72,6 +72,8 @@
     FriendModel* friend=list.friendsList[indexPath.row];
     if (friend.vip==1) {
         cell.textLabel.textColor=[UIColor redColor];
+    }else{
+        cell.textLabel.textColor=[UIColor blackColor];
     }
     cell.textLabel.text=friend.name;
     cell.detailTextLabel.text=friend.intro;
@@ -86,8 +88,9 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    HeaderView* headerView=[HeaderView headerView];
-    headerView.listModel=self.firendList[section];
+    FriendListModel* list=self.firendList[section];
+    HeaderView* headerView=[HeaderView headerView:list];
+    headerView.listModel=list;
     headerView.delegate=self;
     //使用block更新界面
     headerView.block=^(id sender){

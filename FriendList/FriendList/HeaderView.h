@@ -28,5 +28,5 @@ typedef void(^HeaderViewBlock)(id);
 @property(nonatomic,strong)id<HeaderViewDelegate> delegate;
 @property(nonatomic,copy)HeaderViewBlock block;
 
-+(instancetype)headerView;
++(instancetype)headerView:(FriendListModel*)listModel;
 @end
