@@ -39,6 +39,9 @@
     [self tableView];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(clicked) name:@"clicked" object:nil];
 }
+/**
+ *  通知方法
+ */
 -(void)clicked{
 //    [self.tableView reloadData];
     NSLog(@"执行了通知方法");
@@ -92,8 +95,16 @@
 }
 
 #pragma mark-headerDelegate
+/**
+ *  代理方法
+ */
 -(void)headerView:(HeaderView *)headerView{
 //    [self.tableView reloadData];
     NSLog(@"执行代理方法");
+}
+
+-(void)dealloc{
+    //当界面销毁时注销监听器
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 @end
