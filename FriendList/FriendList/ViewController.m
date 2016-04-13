@@ -70,6 +70,9 @@
     }
     FriendListModel* list=self.firendList[indexPath.section];
     FriendModel* friend=list.friendsList[indexPath.row];
+    if (friend.vip==1) {
+        cell.textLabel.textColor=[UIColor redColor];
+    }
     cell.textLabel.text=friend.name;
     cell.detailTextLabel.text=friend.intro;
     cell.imageView.image=[UIImage imageNamed:friend.icon];
