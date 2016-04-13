@@ -19,6 +19,8 @@
 		CF16B1861CBDDF520009895D /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF16B1851CBDDF520009895D /* friends.plist */; };
 		CF16B18D1CBDE08C0009895D /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B18C1CBDE08C0009895D /* FriendModel.m */; };
 		CF16B1901CBDE10F0009895D /* FriendListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B18F1CBDE10F0009895D /* FriendListModel.m */; };
+		CF16B1931CBDE7D50009895D /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B1921CBDE7D50009895D /* HeaderView.m */; };
+		CF16B1951CBDE7E90009895D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF16B1941CBDE7E90009895D /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		CF16B18C1CBDE08C0009895D /* FriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
 		CF16B18E1CBDE10F0009895D /* FriendListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListModel.h; sourceTree = "<group>"; };
 		CF16B18F1CBDE10F0009895D /* FriendListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListModel.m; sourceTree = "<group>"; };
+		CF16B1911CBDE7D50009895D /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		CF16B1921CBDE7D50009895D /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		CF16B1941CBDE7E90009895D /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +171,9 @@
 		CF16B1881CBDDFAB0009895D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CF16B1551CBDDEF10009895D /* ViewController.h */,
+				CF16B1911CBDE7D50009895D /* HeaderView.h */,
+				CF16B1921CBDE7D50009895D /* HeaderView.m */,
+				CF16B1941CBDE7E90009895D /* HeaderView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		CF16B1891CBDDFC40009895D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF16B1551CBDDEF10009895D /* ViewController.h */,
 				CF16B1561CBDDEF10009895D /* ViewController.m */,
 			);
 			name = Controller;
@@ -295,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF16B1621CBDDEF10009895D /* LaunchScreen.storyboard in Resources */,
+				CF16B1951CBDE7E90009895D /* HeaderView.xib in Resources */,
 				CF16B15F1CBDDEF10009895D /* Assets.xcassets in Resources */,
 				CF16B1861CBDDF520009895D /* friends.plist in Resources */,
 				CF16B15A1CBDDEF10009895D /* Main.storyboard in Resources */,
@@ -322,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF16B1931CBDE7D50009895D /* HeaderView.m in Sources */,
 				CF16B18D1CBDE08C0009895D /* FriendModel.m in Sources */,
 				CF16B1571CBDDEF10009895D /* ViewController.m in Sources */,
 				CF16B1541CBDDEF10009895D /* AppDelegate.m in Sources */,

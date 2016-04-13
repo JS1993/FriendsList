@@ -14,4 +14,5 @@
 @property(nonatomic)int online;
 @property(strong,nonatomic)NSArray* friendsList;
 
++(NSArray*)friendListModel;
 @end

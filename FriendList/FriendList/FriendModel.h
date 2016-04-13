@@ -13,7 +13,7 @@
 @property(copy,nonatomic)NSString* icon;
 @property(copy,nonatomic)NSString* intro;
 @property(copy,nonatomic)NSString* name;
-@property(nonatomic)int* vip;
+@property(nonatomic)int vip;
 
 +(instancetype)friendModelWithDict:(NSDictionary*)dict;
 @end
