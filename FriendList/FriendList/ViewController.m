@@ -10,9 +10,10 @@
 #import "FriendListModel.h"
 #import "FriendModel.h"
 #import "HeaderView.h"
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,HeaderViewDelegate>
 @property(nonatomic,strong)UITableView* tableView;
 @property(nonatomic,strong)NSArray* firendList;
+@property(nonatomic)BOOL listIsOpen;
 @end
 
 @implementation ViewController
@@ -36,8 +37,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self tableView];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(clicked) name:@"clicked" object:nil];
 }
-
+-(void)clicked{
+//    [self.tableView reloadData];
+    NSLog(@"执行了通知方法");
+}
 #pragma mark-数据源方法
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -46,7 +51,12 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return [self.firendList[section] friendsList].count;
+    FriendListModel* listModel=self.firendList[section];
+    if (listModel.isOpen==1) {
+        return listModel.friends.count;
+    }else{
+        return 0;
+    }
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -70,7 +80,20 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    FriendListModel* list=self.firendList[section];
-    return [HeaderView headerViewWithTableView:tableView andFriendListModel:list];
+    HeaderView* headerView=[HeaderView headerView];
+    headerView.listModel=self.firendList[section];
+    headerView.delegate=self;
+    //使用block更新界面
+    headerView.block=^(id sender){
+        [tableView reloadData];
+        NSLog(@"执行了block方法");
+    };
+    return headerView;
+}
+
+#pragma mark-headerDelegate
+-(void)headerView:(HeaderView *)headerView{
+//    [self.tableView reloadData];
+    NSLog(@"执行代理方法");
 }
 @end

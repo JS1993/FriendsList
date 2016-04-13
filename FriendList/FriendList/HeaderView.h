@@ -8,8 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import "FriendListModel.h"
+
+@class HeaderView;
+typedef void(^HeaderViewBlock)(id);
+
+
+@protocol HeaderViewDelegate<NSObject>
+-(void)headerView:(HeaderView* )headerView;
+
+@end
+
+
 @interface HeaderView : UIView
+
 @property (strong, nonatomic) IBOutlet UILabel *headerLabel;
 @property (strong, nonatomic) IBOutlet UIButton *headerButton;
-+(instancetype)headerViewWithTableView:(UITableView*)tableView andFriendListModel:(FriendListModel*)listModel;
+
+@property(nonatomic,strong)FriendListModel* listModel;
+@property(nonatomic,strong)id<HeaderViewDelegate> delegate;
+@property(nonatomic,copy)HeaderViewBlock block;
+
++(instancetype)headerView;
 @end

@@ -13,6 +13,7 @@
 @property(copy,nonatomic)NSString* name;
 @property(nonatomic)int online;
 @property(strong,nonatomic)NSArray* friendsList;
+@property(nonatomic)BOOL isOpen;
 
 +(NSArray*)friendListModel;
 @end

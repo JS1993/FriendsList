@@ -11,24 +11,43 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buddy_header_bg" translatesAutoresizingMaskIntoConstraints="NO" id="n5B-yK-qcn">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buddy_header_bg" translatesAutoresizingMaskIntoConstraints="NO" id="n5B-yK-qcn">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y5-9g-Vse">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y5-9g-Vse">
                     <rect key="frame" x="274" y="0.5" width="46" height="43.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="bFk-By-OyN"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcA-DK-qL1">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcA-DK-qL1">
                     <rect key="frame" x="8" y="0.0" width="258" height="44"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" image="buddy_header_arrow"/>
                     <state key="selected" image="buddy_header_bg_highlighted"/>
                     <state key="highlighted" image="buddy_header_bg_highlighted"/>
+                    <connections>
+                        <action selector="headerButtonClicked:" destination="ks4-YY-pb3" eventType="touchUpInside" id="EFe-FN-e1D"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="n5B-yK-qcn" firstAttribute="leading" secondItem="ks4-YY-pb3" secondAttribute="leading" id="4hk-d7-WnH"/>
+                <constraint firstAttribute="bottom" secondItem="3y5-9g-Vse" secondAttribute="bottom" id="6na-Lt-98i"/>
+                <constraint firstItem="UcA-DK-qL1" firstAttribute="top" secondItem="ks4-YY-pb3" secondAttribute="top" id="BsY-Ke-KFR"/>
+                <constraint firstAttribute="bottom" secondItem="UcA-DK-qL1" secondAttribute="bottom" id="X8z-iu-hso"/>
+                <constraint firstItem="3y5-9g-Vse" firstAttribute="top" secondItem="ks4-YY-pb3" secondAttribute="top" constant="0.5" id="aVh-LV-A0V"/>
+                <constraint firstItem="3y5-9g-Vse" firstAttribute="leading" secondItem="UcA-DK-qL1" secondAttribute="trailing" constant="8" id="eC0-p3-xTE"/>
+                <constraint firstAttribute="trailing" secondItem="3y5-9g-Vse" secondAttribute="trailing" id="kJC-wm-3wW"/>
+                <constraint firstAttribute="trailing" secondItem="n5B-yK-qcn" secondAttribute="trailing" id="lYD-mo-Cnk"/>
+                <constraint firstAttribute="bottom" secondItem="n5B-yK-qcn" secondAttribute="bottom" id="oBz-yy-lgJ"/>
+                <constraint firstItem="UcA-DK-qL1" firstAttribute="leading" secondItem="ks4-YY-pb3" secondAttribute="leading" constant="8" id="vJC-eV-m1O"/>
+                <constraint firstItem="n5B-yK-qcn" firstAttribute="top" secondItem="ks4-YY-pb3" secondAttribute="top" id="vLv-ak-huB"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="headerButton" destination="UcA-DK-qL1" id="y8X-6J-B40"/>
