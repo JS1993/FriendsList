@@ -17,6 +17,8 @@
 		CF16B16D1CBDDEF10009895D /* FriendListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B16C1CBDDEF10009895D /* FriendListTests.m */; };
 		CF16B1781CBDDEF10009895D /* FriendListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B1771CBDDEF10009895D /* FriendListUITests.m */; };
 		CF16B1861CBDDF520009895D /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF16B1851CBDDF520009895D /* friends.plist */; };
+		CF16B18D1CBDE08C0009895D /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B18C1CBDE08C0009895D /* FriendModel.m */; };
+		CF16B1901CBDE10F0009895D /* FriendListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B18F1CBDE10F0009895D /* FriendListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		CF16B1771CBDDEF10009895D /* FriendListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendListUITests.m; sourceTree = "<group>"; };
 		CF16B1791CBDDEF10009895D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF16B1851CBDDF520009895D /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
+		CF16B18B1CBDE08C0009895D /* FriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendModel.h; sourceTree = "<group>"; };
+		CF16B18C1CBDE08C0009895D /* FriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
+		CF16B18E1CBDE10F0009895D /* FriendListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListModel.h; sourceTree = "<group>"; };
+		CF16B18F1CBDE10F0009895D /* FriendListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,10 @@
 		CF16B1871CBDDF970009895D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF16B18B1CBDE08C0009895D /* FriendModel.h */,
+				CF16B18C1CBDE08C0009895D /* FriendModel.m */,
+				CF16B18E1CBDE10F0009895D /* FriendListModel.h */,
+				CF16B18F1CBDE10F0009895D /* FriendListModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,8 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF16B18D1CBDE08C0009895D /* FriendModel.m in Sources */,
 				CF16B1571CBDDEF10009895D /* ViewController.m in Sources */,
 				CF16B1541CBDDEF10009895D /* AppDelegate.m in Sources */,
+				CF16B1901CBDE10F0009895D /* FriendListModel.m in Sources */,
 				CF16B1511CBDDEF10009895D /* main.m in Sources */,
 				CF16B15D1CBDDEF10009895D /* FriendList.xcdatamodeld in Sources */,
 			);
