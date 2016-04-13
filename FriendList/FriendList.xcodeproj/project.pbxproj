@@ -16,6 +16,7 @@
 		CF16B1621CBDDEF10009895D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF16B1601CBDDEF10009895D /* LaunchScreen.storyboard */; };
 		CF16B16D1CBDDEF10009895D /* FriendListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B16C1CBDDEF10009895D /* FriendListTests.m */; };
 		CF16B1781CBDDEF10009895D /* FriendListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF16B1771CBDDEF10009895D /* FriendListUITests.m */; };
+		CF16B1861CBDDF520009895D /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF16B1851CBDDF520009895D /* friends.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CF16B1731CBDDEF10009895D /* FriendListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF16B1771CBDDEF10009895D /* FriendListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendListUITests.m; sourceTree = "<group>"; };
 		CF16B1791CBDDEF10009895D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF16B1851CBDDF520009895D /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +105,12 @@
 		CF16B14E1CBDDEF10009895D /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
-				CF16B1521CBDDEF10009895D /* AppDelegate.h */,
-				CF16B1531CBDDEF10009895D /* AppDelegate.m */,
-				CF16B1551CBDDEF10009895D /* ViewController.h */,
-				CF16B1561CBDDEF10009895D /* ViewController.m */,
 				CF16B1581CBDDEF10009895D /* Main.storyboard */,
-				CF16B15E1CBDDEF10009895D /* Assets.xcassets */,
 				CF16B1601CBDDEF10009895D /* LaunchScreen.storyboard */,
-				CF16B1631CBDDEF10009895D /* Info.plist */,
-				CF16B15B1CBDDEF10009895D /* FriendList.xcdatamodeld */,
+				CF16B1891CBDDFC40009895D /* Controller */,
+				CF16B1881CBDDFAB0009895D /* View */,
+				CF16B1871CBDDF970009895D /* Model */,
+				CF16B18A1CBDDFE40009895D /* Others */,
 				CF16B14F1CBDDEF10009895D /* Supporting Files */,
 			);
 			path = FriendList;
@@ -120,7 +119,11 @@
 		CF16B14F1CBDDEF10009895D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF16B15E1CBDDEF10009895D /* Assets.xcassets */,
+				CF16B15B1CBDDEF10009895D /* FriendList.xcdatamodeld */,
+				CF16B1851CBDDF520009895D /* friends.plist */,
 				CF16B1501CBDDEF10009895D /* main.m */,
+				CF16B1631CBDDEF10009895D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,6 +144,38 @@
 				CF16B1791CBDDEF10009895D /* Info.plist */,
 			);
 			path = FriendListUITests;
+			sourceTree = "<group>";
+		};
+		CF16B1871CBDDF970009895D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CF16B1881CBDDFAB0009895D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF16B1551CBDDEF10009895D /* ViewController.h */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CF16B1891CBDDFC40009895D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF16B1561CBDDEF10009895D /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CF16B18A1CBDDFE40009895D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				CF16B1521CBDDEF10009895D /* AppDelegate.h */,
+				CF16B1531CBDDEF10009895D /* AppDelegate.m */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +286,7 @@
 			files = (
 				CF16B1621CBDDEF10009895D /* LaunchScreen.storyboard in Resources */,
 				CF16B15F1CBDDEF10009895D /* Assets.xcassets in Resources */,
+				CF16B1861CBDDF520009895D /* friends.plist in Resources */,
 				CF16B15A1CBDDEF10009895D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
