@@ -27,8 +27,7 @@
                     <rect key="frame" x="8" y="0.0" width="258" height="44"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" image="buddy_header_arrow"/>
-                    <state key="selected" image="buddy_header_bg_highlighted"/>
-                    <state key="highlighted" image="buddy_header_bg_highlighted"/>
+                    <state key="highlighted" image="buddy_header_arrow"/>
                     <connections>
                         <action selector="headerButtonClicked:" destination="ks4-YY-pb3" eventType="touchUpInside" id="EFe-FN-e1D"/>
                     </connections>
@@ -59,6 +58,5 @@
     <resources>
         <image name="buddy_header_arrow" width="7" height="11"/>
         <image name="buddy_header_bg" width="2" height="89"/>
-        <image name="buddy_header_bg_highlighted" width="2" height="89"/>
     </resources>
 </document>

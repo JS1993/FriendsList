@@ -24,6 +24,10 @@
 
 //界面重新布局时调用
 -(void)layoutSubviews{
+    //设置图片容纳格式
+    self.headerButton.imageView.contentMode=UIViewContentModeCenter;
+    //不允许剪切蒙版
+    self.headerButton.imageView.clipsToBounds=NO;
     //设置按钮内部文字和图片的距离
     self.headerButton.titleEdgeInsets=UIEdgeInsetsMake(0, 10, 0, 0);
     //设置按钮内边距
@@ -34,6 +38,15 @@
     [self.headerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     //设置右边标签
     self.headerLabel.text=[NSString stringWithFormat:@"%d/%lu",self.listModel.online,(unsigned long)self.listModel.friendsList.count];
+}
+
+//当前界面加载到父控件时调用
+
+-(void)didMoveToSuperview{
+    if (self.listModel.isOpen==1) {
+        //改变按钮左边图片的角度
+        self.headerButton.imageView.transform=CGAffineTransformMakeRotation(M_PI_2);
+    }
 }
 
 - (IBAction)headerButtonClicked:(UIButton *)sender {
